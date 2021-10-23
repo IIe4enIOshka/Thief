@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Animator))]
+
 public class Movement : MonoBehaviour
 {
     [SerializeField] private float _speed;
@@ -21,7 +25,7 @@ public class Movement : MonoBehaviour
     private void Update()
     {
         _movement = Input.GetAxis("Horizontal");
-        _animator.SetFloat("Speed", Mathf.Abs(_movement));
+        _animator.SetFloat(AnimatorPlayerController.Params.Speed, Mathf.Abs(_movement));
     }
 
     private void FixedUpdate()
