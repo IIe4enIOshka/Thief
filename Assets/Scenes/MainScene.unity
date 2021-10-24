@@ -1003,6 +1003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audio: {fileID: 2004936455}
+  _waitForSeconds: 0.1
 --- !u!61 &2062184315
 BoxCollider2D:
   m_ObjectHideFlags: 0
